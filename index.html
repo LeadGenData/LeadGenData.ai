@@ -90,5 +90,18 @@
     <footer>
         <p>&copy; 2024 LeadGen Data. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Ensure smooth scrolling for better user experience
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
