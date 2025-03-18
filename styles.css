@@ -1,217 +1,136 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadGen Data - Targeted Email Marketing Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .sticky-header {
+            background-color: #a2d2ff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .cta-button {
+            background-color: #ffafcc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #ff70a6;
+            transform: scale(1.1);
+        }
+        .service-list div, .industry-list div {
+            background-color: #cdb4db;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        .service-list div:hover, .industry-list div:hover {
+            background-color: #bde0fe;
+            transform: translateY(-5px);
+        }
+        button {
+            background-color: #ffafcc;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: #ff70a6;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky-header">
+        <h1>LeadGen Data</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#email-lists">Email Lists</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1>Boost Your Business with Verified Email Lists</h1>
+            <p>Access accurate and targeted B2B & B2C email lists for maximum outreach.</p>
+            <a href="#contact" class="cta-button">Get a Free Quote</a>
+        </div>
+    </section>
 
-/* Header */
-.sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #004aad;
-    padding: 20px 50px;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    <section class="services-section" id="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div>Targeted Email Lists</div>
+            <div>B2B & B2C Lead Generation</div>
+            <div>Email Campaign Management</div>
+            <div>Data Cleansing & Verification</div>
+            <div>Account-Based Marketing</div>
+            <div>Custom List Building</div>
+        </div>
+    </section>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-}
+    <section class="industries-section" id="industries">
+        <h2>Industries We Serve</h2>
+        <div class="industry-list">
+            <div>Healthcare</div>
+            <div>Technology</div>
+            <div>Finance & Banking</div>
+            <div>Real Estate</div>
+            <div>Education</div>
+            <div>Manufacturing</div>
+        </div>
+    </section>
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-    font-size: 18px;
-}
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Looking for custom email lists? Get in touch with us today.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-nav ul li a:hover {
-    color: #f4a261;
-}
+    <footer>
+        <p>&copy; 2024 LeadGen Data. All rights reserved.</p>
+    </footer>
 
-/* Hero Section */
-.hero-section {
-    background: url('https://source.unsplash.com/1600x900/?business,technology,marketing') no-repeat center;
-    background-size: cover;
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 50px;
-}
-
-.hero-content {
-    max-width: 650px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.hero-content p {
-    font-size: 20px;
-    margin: 15px 0;
-}
-
-.cta-button {
-    display: inline-block;
-    background: #f4a261;
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-    margin-top: 20px;
-    font-size: 20px;
-}
-
-.cta-button:hover {
-    background: #e76f51;
-}
-
-/* Services Section */
-.services-section {
-    padding: 100px 50px;
-    text-align: center;
-    background: #f4f4f4;
-}
-
-.service-list {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.service-item {
-    background: #004aad;
-    color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-    max-width: 350px;
-    text-align: center;
-    font-size: 18px;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-    background: #0066cc;
-}
-
-/* Email Lists Section */
-.email-lists-section {
-    padding: 80px 50px;
-    background: #ffffff;
-    text-align: center;
-}
-
-.email-list ul {
-    list-style: none;
-    padding: 0;
-}
-
-.email-list ul li {
-    font-size: 20px;
-    margin: 15px 0;
-}
-
-.email-list ul li a {
-    text-decoration: none;
-    color: #004aad;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.email-list ul li a:hover {
-    color: #f4a261;
-}
-
-/* Testimonials Section */
-.testimonials-section {
-    padding: 100px 50px;
-    background: #f8f9fa;
-    text-align: center;
-}
-
-.testimonial {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 100px 50px;
-    text-align: center;
-    background: #ffffff;
-}
-
-.contact-section form {
-    max-width: 550px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-section input, .contact-section textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.contact-section button {
-    background: #004aad;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-size: 20px;
-}
-
-.contact-section button:hover {
-    background: #003399;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    margin-top: 50px;
-    font-size: 18px;
-}
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
