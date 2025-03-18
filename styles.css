@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f7fc;
+    background: #ffffff;
     color: #333;
     line-height: 1.6;
 }
@@ -14,8 +14,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, #004aad, #6a11cb);
-    padding: 15px 30px;
+    background: #2a2a72;
+    padding: 20px 50px;
     transition: all 0.3s ease-in-out;
     z-index: 1000;
     display: flex;
@@ -28,13 +28,9 @@ body {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     padding: 0;
     margin: 0;
-}
-
-nav ul li {
-    display: inline;
 }
 
 nav ul li a {
@@ -42,18 +38,18 @@ nav ul li a {
     color: white;
     font-weight: bold;
     transition: color 0.3s;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #ffdd57;
+    color: #f4a261;
 }
 
 /* Hero Section */
 .hero-section {
-    background: url('https://source.unsplash.com/1600x900/?business,technology') no-repeat center;
+    background: url('https://source.unsplash.com/1600x900/?business,corporate,technology') no-repeat center;
     background-size: cover;
-    height: 600px;
+    height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,108 +59,115 @@ nav ul li a:hover {
 }
 
 .hero-content {
-    max-width: 600px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
     border-radius: 10px;
 }
 
-.hero-content h2 {
-    font-size: 42px;
+.hero-content h1 {
+    font-size: 48px;
     font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin: 15px 0;
 }
 
 .cta-button {
     display: inline-block;
-    background: #ffdd57;
-    color: #333;
-    padding: 14px 30px;
+    background: #f4a261;
+    color: white;
+    padding: 15px 35px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background 0.3s;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .cta-button:hover {
-    background: #ffc107;
+    background: #e76f51;
 }
 
 /* Services Section */
 .services-section {
-    padding: 80px 50px;
+    padding: 100px 50px;
     text-align: center;
-    background: white;
+    background: #f4f4f4;
 }
 
 .service-list {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+    gap: 40px;
+    margin-top: 40px;
     flex-wrap: wrap;
 }
 
 .service-item {
-    background: #004aad;
+    background: #2a2a72;
     color: white;
-    padding: 25px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-    max-width: 300px;
+    max-width: 350px;
     text-align: center;
+    font-size: 18px;
 }
 
 .service-item:hover {
     transform: translateY(-5px);
+    background: #3a3a92;
 }
 
 /* Contact Section */
 .contact-section {
-    padding: 80px 50px;
+    padding: 100px 50px;
     text-align: center;
-    background: #f8f9fa;
+    background: #ffffff;
 }
 
 .contact-section form {
-    max-width: 500px;
+    max-width: 550px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .contact-section input, .contact-section textarea {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .contact-section button {
-    background: #004aad;
+    background: #2a2a72;
     color: white;
-    padding: 14px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .contact-section button:hover {
-    background: #002f6c;
+    background: #1a1a52;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background: #222;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    font-size: 16px;
+    padding: 30px;
+    margin-top: 50px;
+    font-size: 18px;
 }
