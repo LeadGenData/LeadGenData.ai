@@ -10,11 +10,11 @@ body {
     color: #333;
 }
 
-/* Header */
+/* Sticky Header */
 header {
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    background: linear-gradient(90deg, #0066cc, #003366);
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -57,11 +57,13 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
 .hero-content h1 {
     font-size: 36px;
     font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
@@ -69,6 +71,7 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
+/* CTA Button */
 .cta-button {
     display: inline-block;
     padding: 12px 25px;
@@ -88,35 +91,64 @@ nav ul li a:hover {
 
 /* Sections */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
-h2 {
-    font-size: 28px;
-    color: #444;
-    margin-bottom: 20px;
-}
-
-/* List Styling */
-ul {
-    list-style-type: none;
+/* Specialty List */
+.specialty-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     padding: 0;
 }
 
-ul li {
-    font-size: 18px;
-    background: #f1f1f1;
-    padding: 10px;
-    margin: 5px auto;
-    border-radius: 5px;
-    width: 80%;
-    transition: all 0.3s ease-in-out;
+.specialty-list li {
+    background: #0066cc;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
 }
 
-ul li:hover {
-    background: #dfe6e9;
-    transform: translateX(5px);
+.specialty-list li:hover {
+    background: #003366;
+    transform: scale(1.1);
+}
+
+/* Executive and Industry List */
+.executive-lists ul,
+.education ul,
+.industries ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.executive-lists li,
+.education li,
+.industries li {
+    background: #ff914d;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.executive-lists li:hover,
+.education li:hover,
+.industries li:hover {
+    background: #d65f2e;
+    transform: scale(1.1);
 }
 
 /* Footer */
