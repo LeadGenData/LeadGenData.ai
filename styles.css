@@ -132,6 +132,9 @@ section {
     list-style: none;
     padding: 0;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .specialty-list li {
@@ -148,6 +151,7 @@ section {
     text-align: center;
 }
 
+/* Hover Effect for Specialty List Items */
 .specialty-list li:hover {
     transform: translateY(-10px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
@@ -230,3 +234,24 @@ footer p {
         padding: 30px 10px;
     }
 }
+
+/* Add a subtle background animation for the body */
+body {
+    position: relative;
+    background: linear-gradient(45deg, #4c6ef5, #2563eb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Animation for the background */
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
