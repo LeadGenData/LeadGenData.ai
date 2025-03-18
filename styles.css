@@ -1,79 +1,170 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7fc;
-    color: #333;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
+    background-color: #007bff;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0;
     position: sticky;
     top: 0;
-    width: 100%;
+    z-index: 1000;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    margin-left: 20px;
+    font-size: 2em;
+    display: inline;
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: inline;
+    margin-left: 50px;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 15px;
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-}
-
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Bubble Styles */
-.service-bubbles, .specialty-bubbles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.bubble {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
     font-size: 1.1em;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.bubble:hover {
-    transform: scale(1.1);
-    background-color: #45a049;
 }
 
 /* Hero Section */
 .hero-section {
-    background
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-section .cta-button {
+    background-color: #ffffff;
+    color: #007bff;
+    font-size: 1.2em;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero-section .cta-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    margin: 20px 0;
+}
+
+/* Contact Form Styling */
+.contact {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+    display: block;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    font-style: italic;
+    color: #888;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.submit-button:active {
+    background-color: #004085;
+}
+
+.contact-form .submit-button:focus {
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #007bff;
+}
