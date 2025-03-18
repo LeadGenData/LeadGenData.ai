@@ -4,8 +4,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
+/* Header */
 header {
     background-color: #007bff;
     color: white;
@@ -13,6 +15,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    animation: slideDown 1s ease-in-out;
 }
 
 header h1 {
@@ -46,6 +49,7 @@ header nav ul li a {
     color: white;
     text-align: center;
     padding: 80px 20px;
+    animation: fadeIn 2s ease-out;
 }
 
 .hero-section h1 {
@@ -61,17 +65,29 @@ header nav ul li a {
     border: none;
     border-radius: 5px;
     text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 .hero-section .cta-button:hover {
     background-color: #0056b3;
     color: white;
+    transform: scale(1.1);
 }
 
 /* Sections */
 section {
     padding: 50px 20px;
     margin: 20px 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+section:nth-child(even) {
+    animation-delay: 0.3s;
+}
+
+section:nth-child(odd) {
+    animation-delay: 0.5s;
 }
 
 /* Contact Form Styling */
@@ -79,6 +95,7 @@ section {
     background-color: #f8f8f8;
     padding: 50px 20px;
     text-align: center;
+    animation: fadeInUp 2s ease-out forwards;
 }
 
 .contact h2 {
@@ -95,6 +112,8 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .contact-form label {
@@ -117,6 +136,7 @@ section {
 .contact-form input:focus, .contact-form textarea:focus {
     border-color: #007bff;
     outline: none;
+    animation: shake 0.4s ease-in-out;
 }
 
 .contact-form input::placeholder, .contact-form textarea::placeholder {
@@ -137,21 +157,23 @@ section {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .submit-button:hover {
     background-color: #0056b3;
+    transform: scale(1.1);
 }
 
 .submit-button:active {
     background-color: #004085;
 }
 
-.contact-form .submit-button:focus {
+.submit-button:focus {
     outline: none;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -160,11 +182,50 @@ footer {
     margin-top: 30px;
 }
 
-footer a {
-    color: #ffffff;
-    text-decoration: none;
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-footer a:hover {
-    color: #007bff;
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
