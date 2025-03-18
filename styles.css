@@ -12,7 +12,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #1e3a8a; /* Dark Blue */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -56,13 +56,13 @@ body {
 
 /* Hover Effect for Navigation Links */
 .sticky-header nav ul li a:hover {
-    background-color: #ffcc00;
+    background-color: #2563eb; /* Lighter Blue */
     border-radius: 5px;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(90deg, #ffcc00, #ff6600);
+    background: linear-gradient(90deg, #4c6ef5, #2563eb); /* Blue Gradient */
     color: #fff;
     padding: 100px 0;
     text-align: center;
@@ -89,7 +89,7 @@ body {
 }
 
 .hero-section .cta-button:hover {
-    background-color: #ffcc00;
+    background-color: #2563eb; /* Lighter Blue */
 }
 
 /* Section Styles */
@@ -111,7 +111,7 @@ h2 {
 }
 
 .specialty-list li {
-    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    background: linear-gradient(135deg, #4c6ef5, #2563eb); /* Blue Gradient */
     color: white;
     border-radius: 5px;
     margin: 10px;
@@ -168,7 +168,7 @@ h2 {
 }
 
 .contact-form button:hover {
-    background-color: #ffcc00;
+    background-color: #2563eb; /* Lighter Blue */
 }
 
 /* Footer Styles */
