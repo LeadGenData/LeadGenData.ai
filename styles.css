@@ -1,211 +1,311 @@
-/* Global Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+/* Body Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font for better readability */
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
-    background-color: #f4f7fb; /* Soft light background for better readability */
-    color: #333; /* Dark text for better contrast */
 }
 
-/* Header Styles */
+/* Header Styling */
 header {
-    background-color: #003366; /* Dark blue background for header */
-    color: #fff;
-    padding: 15px 0;
-    text-align: center; /* Ensures the header text is centered */
+    background-color: #004b6d;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
+    text-align: center;
     font-size: 2rem;
-    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-/* Navigation Styles */
-nav ul {
+header nav ul {
     list-style: none;
     text-align: center;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center the navigation items */
-    align-items: center;
+    margin-top: 15px;
 }
 
-nav ul li {
-    margin: 0 20px;
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
     font-size: 1.1rem;
-    text-transform: uppercase;
-    transition: color 0.3s ease; /* Smooth transition on hover */
+    transition: color 0.3s;
 }
 
-/* Hover Effect */
-nav ul li a:hover {
-    color: #ffcc00; /* Golden color on hover */
+header nav ul li a:hover {
+    color: #ffd700;
 }
 
 /* Hero Section */
 .hero-section {
-    background: #003366 url('your-image.jpg') no-repeat center center/cover; /* Replace with your image */
+    background: #004b6d;
     color: white;
-    padding: 100px 0;
     text-align: center;
+    padding: 100px 20px;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
+.hero-section .hero-content h1 {
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
-.hero-content p {
+.hero-section .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .cta-button {
-    background-color: #ffcc00; /* Golden button */
-    padding: 15px 25px;
-    font-size: 1.2rem;
-    color: #003366;
-    border: none;
-    cursor: pointer;
+    background-color: #ffd700;
+    color: #004b6d;
     text-decoration: none;
-    text-transform: uppercase;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #e6b800; /* Darken the button on hover */
+    background-color: #ffcc00;
 }
 
-/* Section Styles */
-section {
-    padding: 50px 15px;
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
 }
 
-section h2 {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.services h2 {
     font-size: 2.5rem;
-    color: #003366;
     margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase;
 }
 
-ul {
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 45%;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1.1rem;
+}
+
+/* Email Lists Section */
+.email-lists {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.email-lists h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.email-list-services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.email-list-item {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 45%;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.email-list-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.email-list-item p {
+    font-size: 1.1rem;
+}
+
+/* Specialties and Industries Section */
+.specialties, .industries {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.specialties h2, .industries h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+ul.specialty-list, ul.industry-list {
     list-style-type: none;
-    padding-left: 0;
-    font-size: 1rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+ul.specialty-list li, ul.industry-list li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
-ul li {
-    display: inline-block;
-    margin: 10px 20px;
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-ul li a {
-    color: #003366;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    color: #ffcc00; /* Golden color on hover */
-}
-
-/* About and Testimonials */
-.about p, .testimonials p {
+.testimonials p {
     font-size: 1.2rem;
-    text-align: center;
-    margin-top: 20px;
+    font-style: italic;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #003366;
+/* About Us Section */
+.about {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+}
+
+/* Contact Us Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #004b6d;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
 }
 
-footer p {
-    margin: 10px 0;
+form button:hover {
+    background-color: #ffd700;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #004b6d;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 footer a {
-    color: #ffcc00;
+    color: #ffd700;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: white;
 }
 
-/* Media Queries for Mobile Responsiveness */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
-
-    ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .about p, .testimonials p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.2rem;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
+    .service-list, .email-list-services, .specialty-list, .industry-list {
+        grid-template-columns: 1fr;
     }
 }
