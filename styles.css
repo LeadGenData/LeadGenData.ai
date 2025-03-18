@@ -12,10 +12,6 @@ body {
     color: #333;
 }
 
-h1, h2 {
-    color: #1a73e8;
-}
-
 /* Header */
 header {
     background-color: #333;
@@ -73,99 +69,31 @@ nav ul li a:hover {
     background-color: #ff9900;
 }
 
-/* Specialties Section */
+/* Bubble Styling for Medical Specialties, Services, Industries, etc. */
 .specialty-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     margin-top: 20px;
 }
 
 .specialty-list li {
-    background-color: #ffcc00;
-    color: #1a73e8;
+    background-color: #1a73e8; /* Professional blue background */
+    color: white;
     border-radius: 50%;
     padding: 20px 30px;
-    font-size: 18px;
+    font-size: 16px; /* Adjusted for better visibility */
     font-weight: bold;
     text-align: center;
     min-width: 150px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for a more professional look */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .specialty-list li:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    background-color: #ffcc00; /* Hover effect with a yellow color */
 }
 
-/* Contact Form */
-.contact-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact-form button {
-    background-color: #1a73e8;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.contact-form button:hover {
-    background-color: #ffcc00;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .specialty-list li {
-        min-width: 120px;
-    }
-
-    .contact-form {
-        padding: 20px;
-    }
-}
