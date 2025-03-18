@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="sticky-header">
         <h1>LeadGen Data</h1>
         <nav>
             <ul>
@@ -26,9 +26,8 @@
             </ul>
         </nav>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section fade-in" id="home">
+    
+    <section class="hero-section" id="home">
         <div class="hero-content">
             <h1>Boost Your Business with Verified Email Lists</h1>
             <p>Access accurate and targeted B2B & B2C email lists for maximum outreach.</p>
@@ -36,58 +35,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services fade-in" id="services">
-        <h2>Our Services</h2>
-        <p>At LeadGen Data, we provide a variety of email marketing solutions designed to help businesses achieve maximum outreach. Our services are tailored to help you connect with the right audience through targeted B2B and B2C email lists.</p>
-        
-        <div class="service-list">
-            <div class="service-item">
-                <h3>Email List Building</h3>
-                <p>We specialize in creating accurate, verified, and targeted email lists to help you reach your ideal customers.</p>
-            </div>
-            <div class="service-item">
-                <h3>Lead Generation</h3>
-                <p>Our lead generation services help you attract high-quality leads that are more likely to convert into customers.</p>
-            </div>
-            <div class="service-item">
-                <h3>Email Campaign Management</h3>
-                <p>We offer full-service email campaign management, from strategy development to execution and analysis.</p>
-            </div>
-            <div class="service-item">
-                <h3>Data Validation</h3>
-                <p>We ensure that the email lists you use are up-to-date and free from errors, reducing bounce rates and improving campaign results.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Email Lists Section -->
-    <section class="email-lists fade-in" id="email-lists">
-        <h2>Email Lists Services</h2>
-        <p>Our email lists provide targeted, accurate, and verified information to boost your marketing campaigns. Whether you're targeting specific industries, professionals, or executives, we have customized solutions for you.</p>
-
-        <div class="email-list-services">
-            <div class="email-list-item">
-                <h3>B2B Email Lists</h3>
-                <p>Get access to business-to-business (B2B) email lists that connect you with professionals across various industries.</p>
-            </div>
-            <div class="email-list-item">
-                <h3>B2C Email Lists</h3>
-                <p>Reach out to consumers directly with our B2C email lists, designed for retail, e-commerce, and consumer products businesses.</p>
-            </div>
-            <div class="email-list-item">
-                <h3>Targeted Industry Lists</h3>
-                <p>Target your outreach to specific industries such as healthcare, technology, finance, education, and more.</p>
-            </div>
-            <div class="email-list-item">
-                <h3>Executive Email Lists</h3>
-                <p>Connect with top executives, such as CEOs, CFOs, CTOs, and more, using our specialized executive email lists.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Medical Specialties Section -->
-    <section class="specialties fade-in" id="specialties">
+    <section class="specialties" id="specialties">
         <h2>Medical Specialties</h2>
         <ul class="specialty-list">
             <li>Acupuncture</li>
@@ -137,10 +85,32 @@
         </ul>
     </section>
 
-    <!-- Industries We Serve Section -->
-    <section class="industries fade-in" id="industries">
+    <section class="executive-lists" id="executive-lists">
+        <h2>Executive Email Lists</h2>
+        <ul>
+            <li>CEO Email List</li>
+            <li>CFO Email List</li>
+            <li>COO Email List</li>
+            <li>CMO Email List</li>
+            <li>CTO Email List</li>
+            <li>VP & Director Email List</li>
+        </ul>
+    </section>
+
+    <section class="education" id="education">
+        <h2>Education Industry Email Lists</h2>
+        <ul>
+            <li>College Professors Email List</li>
+            <li>School Principals Email List</li>
+            <li>University Deans Email List</li>
+            <li>Education Administrators Email List</li>
+            <li>School Counselors Email List</li>
+        </ul>
+    </section>
+
+    <section class="industries" id="industries">
         <h2>Industries We Serve</h2>
-        <ul class="industry-list">
+        <ul>
             <li>Healthcare</li>
             <li>Technology</li>
             <li>Finance & Banking</li>
@@ -158,45 +128,57 @@
         </ul>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials fade-in" id="testimonials">
+    <!-- Lead Generation Form Section -->
+    <section class="lead-gen" id="contact">
+        <h2>Contact Us / Request a Free Quote</h2>
+        <p>Fill out the form below, and we’ll get back to you shortly!</p>
+        
+        <form action="submit_form.php" method="POST" class="lead-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required placeholder="Your Full Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email Address">
+            </div>
+            <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" required placeholder="Your Company Name">
+            </div>
+            <div class="form-group">
+                <label for="interest">Interested In</label>
+                <select id="interest" name="interest" required>
+                    <option value="email-lists">Email Lists</option>
+                    <option value="b2b-marketing">B2B Marketing</option>
+                    <option value="b2c-marketing">B2C Marketing</option>
+                    <option value="lead-gen-services">Lead Generation Services</option>
+                    <option value="custom-request">Custom Request</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us more about your needs..."></textarea>
+            </div>
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>LeadGen Data specializes in providing verified email lists to help businesses grow through effective outreach and lead generation strategies.</p>
+    </section>
+
+    <section class="testimonials" id="testimonials">
         <h2>What Our Clients Say</h2>
         <p>"LeadGen Data helped us expand our customer base with their accurate and verified email lists!" - John Doe, CEO</p>
     </section>
 
-    <!-- About Us Section -->
-    <section class="about fade-in" id="about">
-        <h2>About Us</h2>
-        <p>LeadGen Data specializes in providing verified email lists to help businesses grow through effective outreach and lead generation strategies. Our team is dedicated to helping you connect with the right audience at the right time.</p>
-    </section>
-
-    <!-- Contact Us Section -->
-    <section class="contact fade-in" id="contact">
-        <h2>Contact Us</h2>
-        <form action="your-server-endpoint" method="POST">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number (optional):</label>
-            <input type="tel" id="phone" name="phone">
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 LeadGen Data. All rights reserved.</p>
         <p>Follow us on <a href="#">Twitter</a>, <a href="#">Facebook</a>, <a href="#">LinkedIn</a></p>
     </footer>
 
-    <!-- Smooth Scroll Script -->
     <script>
         // Add smooth scrolling behavior to anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
