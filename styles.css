@@ -1,9 +1,9 @@
-/* General body styles */
+/* General Body Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     padding-top: 80px; /* Space for the fixed header */
-    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Vibrant Blue Gradient */
+    background: linear-gradient(135deg, #0066cc, #0099ff); /* Smooth blue gradient */
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite; /* Background animation */
 }
@@ -27,7 +27,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -48,7 +48,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 10px;
     padding: 0;
 }
@@ -71,30 +71,30 @@ body {
 
 /* Hover Effect for Navigation Links */
 .sticky-header nav ul li a:hover {
-    background-color: #ff5e62; /* Accent Hover Color */
+    background-color: #ff5722; /* Accent color - Orange for contrast */
     border-radius: 5px;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue Gradient */
+    background: linear-gradient(135deg, #0066cc, #0099ff); /* Blue gradient */
     color: #fff;
     padding: 100px 20px;
     text-align: center;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .hero-section .cta-button {
-    background-color: #ff5e62; /* Accent Color */
+    background-color: #ff5722; /* Vibrant accent color */
     color: #fff;
     text-decoration: none;
     padding: 15px 30px;
@@ -102,10 +102,11 @@ body {
     font-size: 1.2rem;
     margin-top: 20px;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 .hero-section .cta-button:hover {
-    background-color: #ff8a6d; /* Lighter Hover Accent */
+    background-color: #ff8000; /* Lighter accent */
 }
 
 /* About Us Section */
@@ -117,15 +118,23 @@ body {
 }
 
 .about h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #333;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* Service Cards Section */
 .service-cards {
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: 30px;
     margin-top: 40px;
 }
 
@@ -149,8 +158,9 @@ body {
 }
 
 .service-cards .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 10px 0;
+    color: #333;
 }
 
 .service-cards .card p {
@@ -182,7 +192,7 @@ footer p {
     }
 
     .hero-section h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .service-cards {
