@@ -1,11 +1,11 @@
 /* General body styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding-top: 80px; /* Space for the fixed header */
-    background: linear-gradient(45deg, #6EE7B7, #006C77);
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient background */
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite; /* Animation for the background */
+    animation: gradientBG 15s ease infinite; /* Background animation */
 }
 
 /* Background Animation */
@@ -27,7 +27,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -71,21 +71,22 @@ body {
 
 /* Hover Effect for Navigation Links */
 .sticky-header nav ul li a:hover {
-    background-color: #FF6B6B; /* Soft Red */
+    background-color: #2575fc; /* Lighter blue */
     border-radius: 5px;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(90deg, #6EE7B7, #006C77);
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Elegant gradient */
     color: #fff;
-    padding: 100px 0;
+    padding: 100px 20px;
     text-align: center;
 }
 
 .hero-section h1 {
     font-size: 3rem;
-    margin: 0;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .hero-section p {
@@ -93,31 +94,24 @@ body {
 }
 
 .hero-section .cta-button {
-    background-color: #FF6B6B;
+    background-color: #ff4500; /* Accent color */
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.1rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
     margin-top: 20px;
     display: inline-block;
 }
 
 .hero-section .cta-button:hover {
-    background-color: #FF3D3D; /* Slightly darker red for hover effect */
-}
-
-/* Section Styles */
-section {
-    padding: 50px 20px;
-    text-align: center;
-    margin-top: 20px;
+    background-color: #ff8000; /* Lighter accent */
 }
 
 /* About Us Section */
 .about {
     padding: 50px 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     margin: 20px 0;
     border-radius: 8px;
 }
@@ -127,72 +121,48 @@ section {
     color: #333;
 }
 
-/* Specialty List Styles */
-.specialty-list {
-    list-style: none;
-    padding: 0;
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
     margin-top: 20px;
 }
 
-.specialty-list li {
-    background: linear-gradient(135deg, #6EE7B7, #006C77);
-    color: white;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    width: 220px;
-    font-size: 1rem;
-    text-align: center;
+/* Service Cards Section */
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.specialty-list li:hover {
+.service-cards .card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.service-cards .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact Form Styles */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.service-cards .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    color: #333;
+.service-cards .card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.service-cards .card p {
     font-size: 1rem;
-    color: #333;
-}
-
-.contact-form button {
-    background-color: #006C77;
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #004f57; /* Slightly darker teal */
+    color: #666;
 }
 
 /* Footer Styles */
@@ -222,8 +192,9 @@ footer p {
         font-size: 2.5rem;
     }
 
-    .specialty-list li {
-        width: 100%;
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
     }
 
     .about {
