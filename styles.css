@@ -183,6 +183,69 @@ footer p {
     margin: 5px 0;
 }
 
+/* About Us Section Styles */
+.about {
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #6a98e5, #3f76bf); /* Blue gradient */
+    color: #ffffff;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about h3 {
+    font-size: 28px;
+    color: #f0f0f0;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.about ul li {
+    background: #fff;
+    color: #333;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.about ul li:hover {
+    background: #f0f0f0;
+}
+
+.about ul li strong {
+    color: #3f76bf; /* Blue color for important text */
+}
+
+.about ul li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #3f76bf;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     /* Adjust navigation to be more mobile-friendly */
