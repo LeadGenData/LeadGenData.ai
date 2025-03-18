@@ -1,33 +1,25 @@
-/* General Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Bubbles Design */
+/* Bubble Styles */
 .bubble {
     display: inline-block;
-    background-color: #007bff; /* Blue background for better contrast */
-    color: white;  /* White text for readability */
+    background-color: #007bff; /* Darker blue background for better contrast */
+    color: #fff; /* White text for readability */
     border-radius: 20px;
-    padding: 12px 25px;
+    padding: 12px 24px; /* Added more padding for a better feel */
     margin: 10px;
     font-size: 16px;
     font-weight: 600;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     transition: background-color 0.3s, transform 0.3s;
 }
 
+/* Hover effect for bubbles */
 .bubble:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; /* Darker blue for hover effect */
     transform: scale(1.05);
 }
 
-/* Container for the Bubbles */
+/* Container for bubbles */
 .service-bubbles, .specialty-bubbles {
     display: flex;
     flex-wrap: wrap;
@@ -36,96 +28,42 @@ body {
     margin-top: 20px;
 }
 
-/* Section Headings */
-h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
+.service-bubbles .bubble, .specialty-bubbles .bubble {
+    cursor: pointer;
 }
 
-/* Hero Section */
-.hero-section {
-    background-color: #004085; /* Dark blue background */
+/* Bubbles for Industries and Services (added more contrast) */
+.services .bubble,
+.email-lists .bubble,
+.industries .bubble,
+.executive-lists .bubble,
+.education .bubble {
+    background-color: #28a745; /* Green background for other sections */
     color: white;
-    padding: 50px 0;
-    text-align: center;
 }
 
-.hero-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+/* Hover Effect for Green Bubbles */
+.services .bubble:hover,
+.email-lists .bubble:hover,
+.industries .bubble:hover,
+.executive-lists .bubble:hover,
+.education .bubble:hover {
+    background-color: #218838; /* Darker green for hover effect */
 }
 
-.hero-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
+/* Bubble container for each section */
+.service-bubbles, .specialty-bubbles, .email-lists .service-bubbles, .industries .service-bubbles, .executive-lists .service-bubbles, .education .service-bubbles {
+    gap: 15px;
 }
 
-.cta-button {
-    background-color: #ffc107; /* Yellow background for CTA */
-    color: #333;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+/* Font size adjustments to fit text */
+.bubble {
+    font-size: 14px;
 }
 
-.cta-button:hover {
-    background-color: #e0a800; /* Darker yellow on hover */
-}
-
-/* Header Styling */
-.sticky-header {
-    background-color: #333;
-    color: white;
-    position: sticky;
-    top: 0;
-    padding: 15px 0;
-    z-index: 1000;
-}
-
-.sticky-header .logo h1 {
-    color: white;
-    margin-left: 20px;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.sticky-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: right;
-}
-
-.sticky-header nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-.sticky-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.sticky-header nav ul li a:hover {
-    color: #ffc107; /* Change link color to yellow on hover */
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer a {
-    color: #ffc107;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+/* Optional: Adjust the font size for smaller screens */
+@media (max-width: 768px) {
+    .bubble {
+        font-size: 12px; /* Slightly smaller font for smaller screens */
+    }
 }
