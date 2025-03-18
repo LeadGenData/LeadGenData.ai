@@ -114,6 +114,7 @@ body {
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .services h2, .email-lists h2, .industries h2, .specialties h2, .executive-lists h2, .education h2, .testimonials h2, .about h2, .contact h2 {
@@ -121,6 +122,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Category List Styling (Bubbles/Squares) */
 ul.specialty-list {
     list-style: none;
     padding: 0;
@@ -129,6 +131,18 @@ ul.specialty-list {
 ul.specialty-list li {
     font-size: 1.2rem;
     margin: 10px 0;
+    background-color: #fff;
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 25px; /* Rounded 'bubble' effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow to lift the list items */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+ul.specialty-list li:hover {
+    background-color: #ff5722; /* Accent color on hover */
+    color: #fff;
+    transform: scale(1.05); /* Slight scale effect for interaction */
 }
 
 /* Testimonials Section */
