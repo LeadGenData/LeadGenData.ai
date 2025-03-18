@@ -1,201 +1,189 @@
-/* General Body Styling */
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Header Styling */
 header {
     background-color: #333;
     color: white;
     padding: 20px;
+    text-align: center;
     position: sticky;
     top: 0;
-    z-index: 10;
+    width: 100%;
 }
 
 header h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 2.5em;
 }
 
-header nav ul {
+nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.2em;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Bubble Styles */
+.service-bubbles, .specialty-bubbles, .executive-lists .service-bubbles, .email-lists .service-bubbles, .industries .service-bubbles, .education .service-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.bubble {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bubble:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
 }
 
 /* Hero Section */
 .hero-section {
-    background-color: #007bff;
+    background-color: #333;
     color: white;
-    text-align: center;
     padding: 80px 20px;
+    text-align: center;
 }
 
 .hero-section h1 {
-    font-size: 36px;
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
 .hero-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.hero-section .cta-button {
-    background-color: #ff6600;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.hero-section .cta-button:hover {
-    background-color: #e65c00;
-}
-
-/* Bubble Design for All Sections */
-.service-bubbles,
-.specialty-bubbles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.bubble {
-    background-color: #007bff;
-    color: white;
-    font-size: 18px;
-    padding: 15px 30px;
-    border-radius: 50%;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.bubble:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-}
-
-/* Section Headings */
-h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-top: 40px;
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-/* Services Section */
-.services {
-    background-color: white;
-    padding: 40px 20px;
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-.services p {
-    font-size: 18px;
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-.services .service-bubbles {
-    justify-content: center;
+footer a:hover {
+    text-decoration: underline;
 }
 
-/* Email Lists Section */
-.email-lists {
-    background-color: white;
-    padding: 40px 20px;
-    text-align: center;
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.email-lists p {
-    font-size: 18px;
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
 }
 
-.email-lists .service-bubbles {
-    justify-content: center;
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-/* Industries Section */
-.industries {
-    background-color: white;
-    padding: 40px 20px;
-    text-align: center;
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.industries p {
-    font-size: 18px;
+button:hover {
+    background-color: #45a049;
 }
 
-.industries .service-bubbles {
-    justify-content: center;
+/* Specific Section Styling */
+.services, .email-lists, .industries, .specialties, .executive-lists, .education {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Medical Specialties Section */
-.specialties {
-    background-color: white;
-    padding: 40px 20px;
-    text-align: center;
+/* Industry Specific Bubble Styling */
+.industries .bubble, .email-lists .bubble, .executive-lists .bubble, .education .bubble {
+    background-color: #2196F3;
 }
 
-.specialties p {
-    font-size: 18px;
+.industries .bubble:hover, .email-lists .bubble:hover, .executive-lists .bubble:hover, .education .bubble:hover {
+    background-color: #0b7dda;
 }
 
-.specialties .specialty-bubbles {
-    justify-content: center;
-}
-
-/* Executive Lists Section */
-.executive-lists {
-    background-color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.executive-lists .service-bubbles {
-    justify-content: center;
-}
-
-/* Education Section */
-.education {
-    background-color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.education .service-bubbles {
-    justify-content: center;
-}
-
-/* Testimonials Section */
+/* Testimonial Section */
 .testimonials {
     background-color: #f1f1f1;
     padding: 40px 20px;
@@ -203,68 +191,6 @@ h2 {
 }
 
 .testimonials p {
-    font-size: 18px;
     font-style: italic;
-}
-
-/* Contact Section */
-.contact {
-    background-color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact button {
-    background-color: #007bff;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-footer a {
-    color: #ff6600;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    font-size: 1.2em;
 }
