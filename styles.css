@@ -2,10 +2,10 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    padding-top: 80px; /* Space for the fixed header */
     background: linear-gradient(135deg, #0066cc, #0099ff); /* Smooth blue gradient */
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite; /* Background animation */
+    color: #fff;
 }
 
 /* Background Animation */
@@ -35,7 +35,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Title */
 .sticky-header h1 {
     margin: 0;
     font-size: 2.5rem;
@@ -53,7 +52,6 @@ body {
     padding: 0;
 }
 
-/* Navigation Items */
 .sticky-header nav ul li {
     display: inline-block;
 }
@@ -109,63 +107,34 @@ body {
     background-color: #ff8000; /* Lighter accent */
 }
 
-/* About Us Section */
-.about {
-    padding: 50px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
-.about h2 {
-    font-size: 2.8rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Section Styles */
-section {
+/* Services Section */
+.services, .email-lists, .industries, .specialties, .executive-lists, .education, .testimonials, .about, .contact {
     padding: 50px 20px;
     text-align: center;
     margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 8px;
 }
 
-/* Service Cards Section */
-.service-cards {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.service-cards .card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    transition: transform 0.3s ease;
-}
-
-.service-cards .card:hover {
-    transform: translateY(-10px);
-}
-
-.service-cards .card img {
-    width: 60px;
-    height: 60px;
+.services h2, .email-lists h2, .industries h2, .specialties h2, .executive-lists h2, .education h2, .testimonials h2, .about h2, .contact h2 {
+    font-size: 2.8rem;
     margin-bottom: 20px;
 }
 
-.service-cards .card h3 {
-    font-size: 1.6rem;
-    margin: 10px 0;
-    color: #333;
+ul.specialty-list {
+    list-style: none;
+    padding: 0;
 }
 
-.service-cards .card p {
-    font-size: 1rem;
-    color: #666;
+ul.specialty-list li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Testimonials Section */
+.testimonials p {
+    font-style: italic;
+    color: #333;
 }
 
 /* Footer Styles */
@@ -178,6 +147,56 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff5722;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.contact-form button.submit-button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.submit-button:hover {
+    background-color: #ff8000;
 }
 
 /* Responsive Styles */
@@ -195,12 +214,11 @@ footer p {
         font-size: 2.8rem;
     }
 
-    .service-cards {
-        flex-direction: column;
-        align-items: center;
+    .services, .email-lists, .industries, .specialties, .executive-lists, .education, .testimonials, .about, .contact {
+        padding: 30px 10px;
     }
 
-    .about {
-        padding: 30px 10px;
+    .specialty-list li {
+        font-size: 1.1rem;
     }
 }
