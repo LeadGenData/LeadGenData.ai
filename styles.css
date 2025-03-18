@@ -1,194 +1,134 @@
-/* General Body Styles */
-body {
+/* General Reset */
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #00aaff, #0077cc); /* Blue gradient background */
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite; /* Smooth background animation */
-    color: #fff; /* White text for better contrast */
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Background Animation */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fa;
+    color: #333;
+    padding-top: 80px; /* For sticky header offset */
 }
 
-/* Sticky Header */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Section */
 .sticky-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    background-color: #003366; /* Dark Blue */
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    padding: 15px 20px;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sticky-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Navigation Styles */
-.sticky-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 15px;
-    padding: 0;
-}
-
-.sticky-header nav ul li {
     display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-/* Navigation Links */
+.sticky-header nav ul {
+    float: right;
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
 .sticky-header nav ul li a {
     color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 12px 20px;
-    display: block;
-    border-radius: 25px; /* Rounded corners for nav links */
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    transition: background 0.3s;
 }
 
-/* Hover Effect for Navigation Links */
 .sticky-header nav ul li a:hover {
-    background-color: #ff5722; /* Accent color - Bright orange */
+    background-color: #ff7f50; /* Coral */
+    border-radius: 5px;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #00aaff, #0077cc);
+    background-color: #ff7f50; /* Coral */
     color: #fff;
-    padding: 100px 20px;
     text-align: center;
+    padding: 100px 20px;
 }
 
-.hero-section h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+.hero-section .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
-.hero-section p {
-    font-size: 1.4rem;
+.hero-section .hero-content p {
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
-.hero-section .cta-button {
-    background-color: #ff5722; /* Bright orange accent color */
+.cta-button {
+    background-color: #003366; /* Dark Blue */
     color: #fff;
-    text-decoration: none;
     padding: 15px 30px;
-    border-radius: 8px;
-    font-size: 1.3rem;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.3s;
 }
 
-.hero-section .cta-button:hover {
-    background-color: #ff8000; /* Lighter orange */
+.cta-button:hover {
+    background-color: #ff7f50; /* Coral */
 }
 
-/* Services Section */
-.services, .email-lists, .industries, .specialties, .executive-lists, .education, .testimonials, .about, .contact {
+/* Sections */
+section {
     padding: 60px 20px;
     text-align: center;
-    margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.85); /* Lightened background */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
-/* Section Headings */
 h2 {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 25px;
+    font-size: 28px;
+    color: #003366; /* Dark Blue */
+    margin-bottom: 20px;
 }
 
-/* Category List Styling (Rounded Bubbles) */
-ul.specialty-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-ul.specialty-list li {
-    font-size: 1.2rem;
-    margin: 15px;
-    background-color: #fff;
-    color: #333;
-    padding: 15px 30px;
-    border-radius: 25px; /* Rounded 'bubble' effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
+.specialty-list {
+    text-align: left;
+    display: inline-block;
+    padding: 10px 0;
 }
 
-ul.specialty-list li:hover {
-    background-color: #ff5722; /* Accent color on hover */
-    color: #fff;
-    transform: scale(1.05); /* Slight scale effect on hover */
+.specialty-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-/* Testimonials Section */
-.testimonials p {
-    font-style: italic;
-    color: #333;
-    margin: 20px auto;
-    font-size: 1.3rem;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 30px 0;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ff5722; /* Accent color on hover */
+ul.specialty-list li::before {
+    content: "✔ ";
+    color: #003366;
 }
 
 /* Contact Form */
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
     max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
@@ -197,52 +137,94 @@ footer a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #003366;
+}
+
+.contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    margin-top: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.contact-form button.submit-button {
-    background-color: #ff5722; /* Accent color */
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #ff7f50; /* Coral */
+    outline: none;
+}
+
+.submit-button {
+    background-color: #003366; /* Dark Blue */
     color: #fff;
-    border: none;
     padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    transition: background 0.3s;
 }
 
-.contact-form button.submit-button:hover {
-    background-color: #ff8000; /* Lighter orange */
+.submit-button:hover {
+    background-color: #ff7f50; /* Coral */
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    /* Adjust navigation to be more mobile-friendly */
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: #003366; /* Dark Blue */
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+footer a {
+    color: #ff7f50; /* Coral */
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth Scrolling for Anchor Links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
     .sticky-header nav ul {
         flex-direction: column;
+        align-items: center;
     }
 
-    .sticky-header nav ul li {
-        margin-bottom: 10px;
+    .sticky-header nav ul li a {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
-    .hero-section h1 {
-        font-size: 2.8rem;
+    .hero-section .hero-content h1 {
+        font-size: 30px;
     }
 
-    .services, .email-lists, .industries, .specialties, .executive-lists, .education, .testimonials, .about, .contact {
-        padding: 40px 10px;
+    .hero-section .hero-content p {
+        font-size: 18px;
     }
 
-    .specialty-list li {
-        font-size: 1.1rem;
-        margin: 10px;
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    section {
+        padding: 40px 15px;
     }
 }
