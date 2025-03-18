@@ -1,209 +1,153 @@
-/* Reset styles to ensure uniformity across browsers */
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: linear-gradient(to right, #4e73df, #1cc88a); /* Gradient */
+    color: #fff;
 }
 
-/* Basic body styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #4e8dd4, #56c8d8); /* Blue gradient background */
-    color: #333; /* Default text color */
-    line-height: 1.6;
-    padding-top: 70px; /* To accommodate sticky header */
-}
-
-/* Header */
-header {
+/* Header Styles */
+.sticky-header {
+    background-color: #333;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
-    background-color: #2d4976; /* Darker blue background for header */
-    color: #fff; /* White text color */
-    padding: 15px 0;
-    z-index: 1000;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 10px;
+.sticky-header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-nav ul {
+.sticky-header nav ul {
     list-style: none;
-    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
-nav ul li {
+.sticky-header nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff; /* White text for links */
+.sticky-header nav ul li a {
     text-decoration: none;
-    font-size: 1.1em;
+    color: #fff;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffc107; /* Highlight color on hover */
+.sticky-header nav ul li a:hover {
+    background-color: #1cc88a; /* Hover effect */
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, #2e4e7b, #56c8d8); /* Dark to light blue gradient */
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 100px 20px;
     text-align: center;
-    padding: 80px 20px;
 }
 
-.hero-section h1 {
+.hero-section .hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
 }
 
-.hero-section p {
+.hero-section .hero-content p {
     font-size: 1.2em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.cta-button {
-    background-color: #ffc107;
-    color: #333;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.hero-section .cta-button {
+    background-color: #1cc88a;
+    padding: 12px 25px;
+    color: #fff;
     text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.1em;
 }
 
-.cta-button:hover {
-    background-color: #ff9800; /* Button hover effect */
+.hero-section .cta-button:hover {
+    background-color: #17a05c; /* Hover effect */
 }
 
-/* Section Styles */
+/* Sections */
 section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     margin-bottom: 20px;
-    color: #2e4976; /* Dark blue for headings */
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-/* Medical Specialties Bubbles */
+/* Specialty Lists */
 .specialty-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px 0;
 }
 
 .specialty-list li {
-    background: #fff;
-    border-radius: 50%;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    color: #2e4e7b; /* Dark blue text for bubbles */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background 0.3s;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .specialty-list li:hover {
-    transform: scale(1.1); /* Bubbles grow on hover */
-    background: #56c8d8; /* Light blue background on hover */
-    color: #fff; /* White text when hovering */
+    background-color: #1cc88a; /* Hover effect */
 }
 
-/* Executive Lists and Education Section */
-ul li {
-    background: #f0f0f0; /* Light grey background for list items */
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    transition: background 0.3s ease;
-}
-
-ul li:hover {
-    background-color: #56c8d8; /* Light blue background on hover */
-    color: #fff; /* White text on hover */
-}
-
-/* Footer */
-footer {
-    background-color: #2d4976;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #ffc107;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Contact Form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
+/* Form */
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 1.1em;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
 .contact-form button {
-    background-color: #ffc107;
-    color: #333;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    background-color: #1cc88a;
+    padding: 12px 25px;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 .contact-form button:hover {
-    background-color: #ff9800; /* Button hover effect */
+    background-color: #17a05c; /* Hover effect */
 }
 
-/* Scroll animation */
-@keyframes smoothScroll {
-    0% { transform: translateY(10px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+/* Footer */
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
 }
 
-h2, p {
-    animation: smoothScroll 0.8s ease-in-out;
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
 }
