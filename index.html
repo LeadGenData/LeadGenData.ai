@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="sticky-header">
+    <header>
         <h1>LeadGen Data</h1>
         <nav>
             <ul>
@@ -26,8 +26,9 @@
             </ul>
         </nav>
     </header>
-    
-    <section class="hero-section" id="home">
+
+    <!-- Hero Section -->
+    <section class="hero-section fade-in" id="home">
         <div class="hero-content">
             <h1>Boost Your Business with Verified Email Lists</h1>
             <p>Access accurate and targeted B2B & B2C email lists for maximum outreach.</p>
@@ -35,7 +36,8 @@
         </div>
     </section>
 
-    <section class="services" id="services">
+    <!-- Services Section -->
+    <section class="services fade-in" id="services">
         <h2>Our Services</h2>
         <p>At LeadGen Data, we provide a variety of email marketing solutions designed to help businesses achieve maximum outreach. Our services are tailored to help you connect with the right audience through targeted B2B and B2C email lists.</p>
         
@@ -59,7 +61,8 @@
         </div>
     </section>
 
-    <section class="email-lists" id="email-lists">
+    <!-- Email Lists Section -->
+    <section class="email-lists fade-in" id="email-lists">
         <h2>Email Lists Services</h2>
         <p>Our email lists provide targeted, accurate, and verified information to boost your marketing campaigns. Whether you're targeting specific industries, professionals, or executives, we have customized solutions for you.</p>
 
@@ -83,7 +86,8 @@
         </div>
     </section>
 
-    <section class="specialties" id="specialties">
+    <!-- Medical Specialties Section -->
+    <section class="specialties fade-in" id="specialties">
         <h2>Medical Specialties</h2>
         <ul class="specialty-list">
             <li>Acupuncture</li>
@@ -133,32 +137,10 @@
         </ul>
     </section>
 
-    <section class="executive-lists" id="executive-lists">
-        <h2>Executive Email Lists</h2>
-        <ul>
-            <li>CEO Email List</li>
-            <li>CFO Email List</li>
-            <li>COO Email List</li>
-            <li>CMO Email List</li>
-            <li>CTO Email List</li>
-            <li>VP & Director Email List</li>
-        </ul>
-    </section>
-
-    <section class="education" id="education">
-        <h2>Education Industry Email Lists</h2>
-        <ul>
-            <li>College Professors Email List</li>
-            <li>School Principals Email List</li>
-            <li>University Deans Email List</li>
-            <li>Education Administrators Email List</li>
-            <li>School Counselors Email List</li>
-        </ul>
-    </section>
-
-    <section class="industries" id="industries">
+    <!-- Industries We Serve Section -->
+    <section class="industries fade-in" id="industries">
         <h2>Industries We Serve</h2>
-        <ul>
+        <ul class="industry-list">
             <li>Healthcare</li>
             <li>Technology</li>
             <li>Finance & Banking</li>
@@ -176,20 +158,21 @@
         </ul>
     </section>
 
-    <section class="about" id="about">
-        <h2>About Us</h2>
-        <p>LeadGen Data specializes in providing verified email lists to help businesses grow through effective outreach and lead generation strategies.</p>
-    </section>
-
-    <section class="testimonials" id="testimonials">
+    <!-- Testimonials Section -->
+    <section class="testimonials fade-in" id="testimonials">
         <h2>What Our Clients Say</h2>
         <p>"LeadGen Data helped us expand our customer base with their accurate and verified email lists!" - John Doe, CEO</p>
     </section>
 
-    <section class="contact" id="contact">
+    <!-- About Us Section -->
+    <section class="about fade-in" id="about">
+        <h2>About Us</h2>
+        <p>LeadGen Data specializes in providing verified email lists to help businesses grow through effective outreach and lead generation strategies. Our team is dedicated to helping you connect with the right audience at the right time.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact fade-in" id="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions or would like to request a quote, feel free to reach out to us. We'll be happy to assist you!</p>
-        
         <form action="your-server-endpoint" method="POST">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -207,11 +190,13 @@
         </form>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 LeadGen Data. All rights reserved.</p>
         <p>Follow us on <a href="#">Twitter</a>, <a href="#">Facebook</a>, <a href="#">LinkedIn</a></p>
     </footer>
 
+    <!-- Smooth Scroll Script -->
     <script>
         // Add smooth scrolling behavior to anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
