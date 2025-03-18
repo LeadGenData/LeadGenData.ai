@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif; /* Default font */
+    font-family: 'Roboto', sans-serif; /* Google Font */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -103,7 +103,7 @@ h2 {
 .specialty-list li {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 0; /* Square shape (no rounded corners) */
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
