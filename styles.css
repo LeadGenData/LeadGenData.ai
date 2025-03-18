@@ -1,4 +1,4 @@
-/* Resetting some default browser styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,39 +8,39 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background: #f0f0f0;
     color: #333;
-    background-color: #f4f4f4;
+    margin-top: 60px; /* To offset the sticky header */
 }
 
-/* Header styling */
+/* Sticky Header */
 .sticky-header {
-    background-color: #0077b6; /* Blue background for the header */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
     position: sticky;
     top: 0;
+    background-color: #003366;
+    color: white;
+    padding: 15px 0;
     z-index: 1000;
 }
 
 .sticky-header h1 {
-    font-size: 36px;
+    text-align: center;
 }
 
 .sticky-header nav ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
-    padding: 0;
 }
 
 .sticky-header nav ul li {
-    display: inline;
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
 .sticky-header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .sticky-header nav ul li a:hover {
@@ -49,142 +49,160 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-color: #00aaff;
+    background: linear-gradient(135deg, #007bff, #00bfff);
     color: white;
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .hero-section h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 3rem;
 }
 
 .hero-section p {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 
 .cta-button {
-    background-color: #005f8a;
-    padding: 15px 30px;
+    background-color: #ff6600;
     color: white;
-    font-size: 18px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .cta-button:hover {
-    background-color: #003d5c;
+    background-color: #ff4500;
 }
 
-/* About Us Section Styling */
-.about {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
+/* Services Section */
+.services, .email-lists, .industries, .specialties, .executive-lists, .education {
+    padding: 50px 20px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.about h2 {
-    color: #333;
-    font-size: 32px;
+.services h2, .email-lists h2, .industries h2, .specialties h2, .executive-lists h2, .education h2 {
+    font-size: 2.5rem;
+    color: #003366;
     margin-bottom: 20px;
 }
 
-.about p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.specialty-list {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 1.1rem;
 }
 
-.about-background {
-    background: linear-gradient(to right, #00aaff, #005f8a);
-    padding: 40px 20px;
-    color: white;
-    border-radius: 8px;
-    margin-bottom: 30px;
+.specialty-list li {
+    margin: 10px 0;
 }
 
-.about .values ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.about .values ul li {
-    background-color: #fff;
-    color: #333;
-    padding: 25px 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* About Section */
+.about {
+    background: #ffffff;
+    padding: 50px 20px;
     text-align: center;
-    font-size: 18px;
-    transition: transform 0.3s ease;
+    color: #333;
 }
 
-.about .values ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.about h2 {
+    font-size: 2.5rem;
+    color: #003366;
 }
 
-/* Contact Form Styling */
+.about ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about ul li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.testimonials p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #555;
+}
+
+/* Contact Form Section */
+.contact {
+    background: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
 .contact-form {
-    display: grid;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
+    background: #f9f9f9;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    font-size: 1.1rem;
     padding: 10px;
-    font-size: 16px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 .contact-form textarea {
+    resize: vertical;
     height: 150px;
-    resize: none;
 }
 
-.submit-button {
-    background-color: #0077b6;
+.contact-form button {
+    background-color: #003366;
     color: white;
-    padding: 15px 20px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
-.submit-button:hover {
-    background-color: #005f8a;
+.contact-form button:hover {
+    background-color: #005599;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0077b6;
+    background-color: #003366;
     color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
 footer p {
-    margin: 10px 0;
+    font-size: 1rem;
 }
 
 footer a {
@@ -194,18 +212,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Styling for the list items in each section */
-.specialty-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.specialty-list li {
-    background-color: #e0f7fa;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
 }
