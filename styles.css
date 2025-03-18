@@ -6,9 +6,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f7fa;
+    background: #f7f7f7;
     color: #333;
     padding-top: 80px; /* For sticky header offset */
 }
@@ -28,15 +28,16 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #003366; /* Dark Blue */
+    background: linear-gradient(90deg, rgba(0, 51, 102, 1) 0%, rgba(255, 127, 80, 1) 100%); /* Gradient Blue to Coral */
     color: #fff;
     padding: 15px 20px;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .sticky-header h1 {
     display: inline-block;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -56,25 +57,26 @@ ul {
 }
 
 .sticky-header nav ul li a:hover {
-    background-color: #ff7f50; /* Coral */
+    background-color: rgba(255, 127, 80, 0.8); /* Semi-transparent Coral */
     border-radius: 5px;
 }
 
 /* Hero Section */
 .hero-section {
-    background-color: #ff7f50; /* Coral */
+    background: linear-gradient(135deg, #003366, #ff7f50); /* Gradient Blue to Coral */
     color: #fff;
     text-align: center;
     padding: 100px 20px;
 }
 
 .hero-section .hero-content h1 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .hero-section .hero-content p {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 30px;
 }
 
@@ -101,30 +103,49 @@ section {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 32px;
     color: #003366; /* Dark Blue */
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 p {
     font-size: 18px;
     margin-bottom: 20px;
+    color: #333;
 }
 
+/* Square Bubbles for Specialties and Titles */
 .specialty-list {
-    text-align: left;
-    display: inline-block;
-    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid layout */
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .specialty-list li {
-    font-size: 16px;
-    margin-bottom: 10px;
+    background-color: #fff;
+    border: 2px solid #003366; /* Dark Blue Border */
+    border-radius: 8px; /* Rounded corners for bubble effect */
+    padding: 20px;
+    font-size: 18px;
+    color: #003366;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-ul.specialty-list li::before {
+.specialty-list li:hover {
+    transform: translateY(-5px); /* Slight raise effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.specialty-list li::before {
     content: "✔ ";
-    color: #003366;
+    color: #003366; /* Dark Blue */
 }
 
 /* Contact Form */
@@ -141,7 +162,7 @@ ul.specialty-list li::before {
     display: block;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #003366;
+    color: #003366; /* Dark Blue */
 }
 
 .contact-form input, .contact-form textarea {
@@ -226,5 +247,13 @@ html {
 
     section {
         padding: 40px 15px;
+    }
+
+    .specialty-list {
+        grid-template-columns: 1fr 1fr; /* Two items per row for smaller screens */
+    }
+
+    .specialty-list li {
+        font-size: 16px;
     }
 }
