@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     padding-top: 80px; /* Space for the fixed header */
-    background: linear-gradient(45deg, #4c6ef5, #2563eb);
+    background: linear-gradient(45deg, #6EE7B7, #006C77);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite; /* Animation for the background */
 }
@@ -27,7 +27,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -71,13 +71,13 @@ body {
 
 /* Hover Effect for Navigation Links */
 .sticky-header nav ul li a:hover {
-    background-color: #2563eb; /* Lighter Blue */
+    background-color: #FF6B6B; /* Soft Red */
     border-radius: 5px;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(90deg, #4c6ef5, #2563eb);
+    background: linear-gradient(90deg, #6EE7B7, #006C77);
     color: #fff;
     padding: 100px 0;
     text-align: center;
@@ -93,7 +93,7 @@ body {
 }
 
 .hero-section .cta-button {
-    background-color: #333;
+    background-color: #FF6B6B;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -104,7 +104,7 @@ body {
 }
 
 .hero-section .cta-button:hover {
-    background-color: #2563eb; /* Lighter Blue */
+    background-color: #FF3D3D; /* Slightly darker red for hover effect */
 }
 
 /* Section Styles */
@@ -135,7 +135,7 @@ section {
 }
 
 .specialty-list li {
-    background: linear-gradient(135deg, #4c6ef5, #2563eb);
+    background: linear-gradient(135deg, #6EE7B7, #006C77);
     color: white;
     border-radius: 5px;
     margin: 10px;
@@ -182,7 +182,7 @@ section {
 }
 
 .contact-form button {
-    background-color: #333;
+    background-color: #006C77;
     color: #fff;
     font-size: 1.1rem;
     padding: 12px 20px;
@@ -192,7 +192,7 @@ section {
 }
 
 .contact-form button:hover {
-    background-color: #2563eb; /* Lighter Blue */
+    background-color: #004f57; /* Slightly darker teal */
 }
 
 /* Footer Styles */
