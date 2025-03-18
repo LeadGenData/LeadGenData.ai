@@ -1,156 +1,211 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Resetting some default browser styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+.sticky-header {
+    background-color: #0077b6; /* Blue background for the header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
     position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 10;
+    z-index: 1000;
 }
 
-header h1 {
-    text-align: center;
-    margin: 0;
+.sticky-header h1 {
+    font-size: 36px;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
+.sticky-header nav ul {
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
-    margin: 0 15px;
+.sticky-header nav ul li {
+    display: inline;
+    margin-right: 15px;
 }
 
-nav ul li a {
-    color: #fff;
+.sticky-header nav ul li a {
+    color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
+.sticky-header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, #00bcd4, #008c8c);
+    background-color: #00aaff;
     color: white;
+    padding: 100px 20px;
     text-align: center;
-    padding: 80px 20px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .cta-button {
-    background-color: #f57c00;
+    background-color: #005f8a;
+    padding: 15px 30px;
     color: white;
-    padding: 12px 25px;
+    font-size: 18px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
 }
 
 .cta-button:hover {
-    background-color: #ff5722;
+    background-color: #003d5c;
 }
 
-/* Specialty Bubble Styles */
-.specialty-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Creates dynamic columns */
-    gap: 15px;
-    padding: 20px 0;
-    list-style: none;
-}
-
-.specialty-list li {
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
+/* About Us Section Styling */
+.about {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-background {
+    background: linear-gradient(to right, #00aaff, #005f8a);
+    padding: 40px 20px;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.about .values ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.about .values ul li {
+    background-color: #fff;
+    color: #333;
+    padding: 25px 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.about .values ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
     font-size: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit-button {
+    background-color: #0077b6;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
     cursor: pointer;
 }
 
-.specialty-list li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.submit-button:hover {
+    background-color: #005f8a;
 }
 
-/* Header and Content Styling */
-h2, h3 {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-}
-
-section {
-    padding: 60px 20px;
-}
-
-section p {
-    text-align: center;
-    font-size: 16px;
-    color: #666;
-}
-
-/* Footer Styles */
+/* Footer Styling */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
+    background-color: #0077b6;
+    color: white;
+}
+
+footer p {
+    margin: 10px 0;
 }
 
 footer a {
-    color: #f57c00;
+    color: white;
     text-decoration: none;
-    margin: 0 10px;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-/* Contact Form Styling */
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 16px;
+/* Styling for the list items in each section */
+.specialty-list {
+    list-style: none;
+    padding-left: 0;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 100%;
+.specialty-list li {
+    background-color: #e0f7fa;
+    margin: 10px 0;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.contact-form .submit-button {
-    background-color: #f57c00;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form .submit-button:hover {
-    background-color: #ff5722;
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    .specialty-list {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller columns for mobile */
-    }
+    font-size: 18px;
 }
