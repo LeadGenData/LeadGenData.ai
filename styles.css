@@ -7,8 +7,13 @@ html {
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f4f4f4;
   line-height: 1.6;
+  background-color: #ffffff;
+  background-image: url("https://raw.githubusercontent.com/LeadGenData/LeadGenData.ai/main/page-turner.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* Sticky Header */
