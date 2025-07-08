@@ -1,8 +1,12 @@
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
-  padding-top: 120px; /* Offset for sticky header */
+  padding-top: 120px; /* Space for sticky header */
   background-color: #f4f4f4;
+}
+
+html {
+  scroll-padding-top: 120px; /* For smooth anchor scrolling */
 }
 
 .sticky-header {
@@ -21,15 +25,20 @@ body {
   font-size: 2.5rem;
 }
 
+/* Navigation fixes */
 nav ul {
-  list-style: none;
-  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  justify-content: center;
   padding: 0;
+  margin: 10px 0 0;
+  list-style: none;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
@@ -43,6 +52,7 @@ nav ul li a:hover {
   color: #ffcc00;
 }
 
+/* Hero section */
 .hero-section {
   background: linear-gradient(to right, #004a99, #00b7ff);
   color: white;
@@ -74,4 +84,63 @@ nav ul li a:hover {
   background-color: #ff9900;
 }
 
-/* Add your other styling here for lists, sections, contact form, footer, etc. */
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #004a99;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005bbb;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
