@@ -17,42 +17,32 @@ body {
 }
 
 /* Sticky Header */
-.sticky-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #004a99;
-  color: white;
-  padding: 20px 0;
-  z-index: 1000;
-  text-align: center;
+.site-header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.sticky-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+.navbar ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin: 0;
   padding: 0;
-  margin: 10px 0 0;
-  gap: 12px;
 }
 
-nav ul li a {
+.navbar li a {
   text-decoration: none;
-  color: white;
-  padding: 6px 10px;
-  font-size: 0.78rem;
+  font-size: 1.05rem;         /* Slightly larger text */
+  font-weight: 600;           /* Semi-bold appearance */
+  color: #003366;             /* Deep blue for visibility */
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ffcc00;
+.navbar li a:hover {
+  color: #007acc;             /* Accent hover color */
 }
 
 /* Hero Section */
