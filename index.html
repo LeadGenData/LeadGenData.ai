@@ -36,54 +36,6 @@
     </div>
   </section>
 
-  <section class="services" id="services">
-    <h2>Our Services</h2>
-    <p>We offer targeted email lists and lead generation services to help businesses grow. Our offerings include:</p>
-    <ul class="specialty-list">
-      <li>Email List Procurement</li>
-      <li>Lead Generation Campaigns</li>
-      <li>Targeted B2B & B2C Email Marketing</li>
-      <li>Data Cleaning & Verification</li>
-      <li>Targeted Campaign Design</li>
-    </ul>
-  </section>
-
-  <section class="email-lists" id="email-lists">
-    <h2>Email Lists</h2>
-    <p>We provide verified and segmented email lists for various industries:</p>
-    <ul class="specialty-list">
-      <li>Healthcare Professionals</li>
-      <li>Technology Sector</li>
-      <li>Finance & Banking</li>
-      <li>Real Estate Industry</li>
-      <li>Education Sector</li>
-      <li>Retail & E-commerce</li>
-      <li>Legal & Law Firms</li>
-      <li>Construction & Manufacturing</li>
-      <li>Automotive & Transportation</li>
-    </ul>
-  </section>
-
-  <section class="industries" id="industries">
-    <h2>Industries We Serve</h2>
-    <ul class="specialty-list">
-      <li>Healthcare</li>
-      <li>Technology</li>
-      <li>Finance & Banking</li>
-      <li>Real Estate</li>
-      <li>Education</li>
-      <li>Manufacturing</li>
-      <li>Retail & E-commerce</li>
-      <li>Legal & Law Firms</li>
-      <li>Hospitality & Travel</li>
-      <li>Automotive</li>
-      <li>Telecommunications</li>
-      <li>Energy & Utilities</li>
-      <li>Government</li>
-      <li>Insurance</li>
-    </ul>
-  </section>
-
   <section class="specialties" id="specialties">
     <h2>Medical Specialties</h2>
     <ul class="specialty-list">
@@ -158,35 +110,35 @@
     </ul>
   </section>
 
-  <section class="testimonials" id="testimonials">
-    <h2>What Our Clients Say</h2>
-    <p>"LeadGen Data helped us expand our customer base with their accurate and verified email lists!" – John Doe, CEO</p>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST" class="contact-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
   </section>
 
-  <section class="about" id="about">
-    <h2>About Us</h2>
-    <p>LeadGen Data specializes in providing accurate and verified email lists for businesses to enhance their lead generation campaigns. Our mission is to help companies effectively target their audience and boost outreach through precise data-driven strategies.</p>
-    <h3>Why Choose Us?</h3>
-    <ul>
-      <li><strong>Verified Data:</strong> Our email lists are highly accurate and verified.</li>
-      <li><strong>Custom Solutions:</strong> Tailored lists for specific industries.</li>
-      <li><strong>Experienced Team:</strong> Years of expertise in lead generation.</li>
-      <li><strong>Customer-Centric Approach:</strong> Services aligned with your goals.</li>
-    </ul>
-  </section>
+  <footer>
+    <p>&copy; 2025 LeadGen Data. All rights reserved.</p>
+  </footer>
 
-<section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <form action="#" method="POST" class="contact-form">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-
-    <label for="message">Your Message:</label>
-    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-
-    <button type="submit" class="submit-button">Send Message</button>
-  </form>
-</section>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
