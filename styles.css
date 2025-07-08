@@ -27,7 +27,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Navigation Bar Styling */
+/* ===== Navigation Bar Styling ===== */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -51,8 +51,36 @@ body {
   font-size: 1.08rem;
 }
 
-/* Responsive Mobile Nav */
+/* ===== Brand Name Styling ===== */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #f9fbfc;
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #004080; /* Your brand blue */
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Responsive Mobile Nav & Header ===== */
 @media (max-width: 480px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .brand-name {
+    margin-bottom: 12px;
+  }
+
   .navbar ul {
     gap: 12px;
     flex-wrap: wrap;
