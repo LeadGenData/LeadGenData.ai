@@ -78,11 +78,14 @@ nav ul li a:hover {
   background-color: #ff9900;
 }
 
-/* Section Styling */
+/* Bubble-style Section Containers */
 section {
-  padding: 60px 20px;
+  background-color: white;
+  margin: 40px auto;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
   max-width: 1000px;
-  margin: 0 auto;
 }
 
 section h2 {
@@ -97,6 +100,7 @@ section h3 {
   color: #333;
 }
 
+/* Specialty Lists */
 .specialty-list {
   list-style: disc;
   padding-left: 20px;
@@ -105,15 +109,17 @@ section h3 {
 
 .specialty-list li {
   margin-bottom: 8px;
+  padding-left: 10px;
 }
 
-/* Testimonials */
-.testimonials p {
-  font-style: italic;
+/* Testimonials Bubble */
+.testimonials {
   background-color: #fff8e1;
-  padding: 20px;
   border-left: 5px solid #ffcc00;
-  border-radius: 5px;
+  padding: 30px;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Contact Form */
@@ -189,6 +195,6 @@ footer {
   }
 
   section {
-    padding: 40px 15px;
+    padding: 30px 20px;
   }
 }
