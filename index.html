@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,8 +36,6 @@
     </div>
   </section>
 
-  <!-- Add your other sections here (services, email lists, industries, etc.) -->
-
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <form action="YOUR_GOOGLE_SCRIPT_URL" method="POST" class="contact-form">
@@ -64,11 +61,10 @@
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth',
+          behavior: 'smooth'
         });
       });
     });
   </script>
 </body>
-
 </html>
