@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leadgendata.github.io/LeadGenData.ai/sitemap.xml
