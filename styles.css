@@ -73,9 +73,10 @@ nav ul li a:hover {
   display: inline-block;
   transition: background-color 0.3s ease;
 }
-
 .cta-button:hover {
   background-color: #ff9900;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Section Containers */
@@ -124,6 +125,7 @@ section h3 {
 
 .specialty-list li:hover {
   background-color: #cce4ff;
+  color: #004a99; /* Dark blue text for contrast */
   cursor: default;
 }
 
